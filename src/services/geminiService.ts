@@ -1,11 +1,12 @@
+
 import { GoogleGenAI, Modality } from "@google/genai";
 import { MockupStyle, ClothingType } from '../types';
 
-// fix: Use process.env.API_KEY as per the guidelines. This also resolves the TypeScript error.
+// fix: Use process.env.API_KEY to access the API key as per the coding guidelines.
 const API_KEY = process.env.API_KEY;
 
 if (!API_KEY) {
-  // fix: Update error message to align with using process.env.API_KEY.
+  // fix: Updated error message to reflect the change from VITE_API_KEY to API_KEY.
   throw new Error("API_KEY environment variable not set");
 }
 
